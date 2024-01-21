@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/default.css" />
+    <link rel="stylesheet" href="./css/typography.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/page.css" />
+    <title>Task manager</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="filter">
+        <select class="filter__select">
+          <option>Усі</option>
+          <option>До виконання</option>
+          <option>В процесі</option>
+          <option>Тестування</option>
+          <option>Готово</option>
+        </select>
+        <button class="filter__button">Пошук</button>
+      </div>
+
+      <h1 class="header__title">Task manager</h1>
+
+      <input type="text" class="header__search" placeholder="Пошук по назві" />
+    </header>
+
+    <section class="page">
+      <button class="page__add-task">+</button>
+
+      <div class="modal">
+        <div class="modal__header">
+          <div></div>
+          <h2>Введіть дані:</h2>
+          <button class="close-button">Х</button>
+        </div>
+
+        <div class="modal__name">
+          <label for="name">Ім'я</label>
+          <input id="name" placeholder="Напишіть" />
+        </div>
+
+        <div class="modal__date">
+          <label for="date">Дата</label>
+          <input id="date" type="date" />
+        </div>
+        <div class="modal__description">
+          <label for="description">Опис</label>
+          <textarea id="description" placeholder="Напишіть опис"></textarea>
+        </div>
+
+        <div class="modal__footer">
+          <div class="state-box">
+            <label for="state">Статус:</label>
+            <select id="state" class="state-box__state-new">
+              <option value="До виконання">До виконання</option>
+              <option value="В процесі">В процесі</option>
+              <option value="Тестування">Тестування</option>
+              <option value="Готово">Готово</option>
+            </select>
+          </div>
+
+          <div class="buttons-box">
+            <button class="button-delete">Видалити</button>
+            <button class="button-save">Зберегти</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

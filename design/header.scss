@@ -1,0 +1,59 @@
+@import "./color.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $cream;
+  padding: 16px 36px;
+
+  .filter {
+    width: 100%;
+  }
+
+  &__title {
+    width: 100%;
+  }
+
+  &__search {
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: inset 0px 0px 0px 2px $black;
+  }
+
+  .selected {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 16px;
+
+    > :not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    .filter {
+      display: flex;
+      flex-direction: column;
+      order: 1;
+
+      &__select {
+        max-width: none;
+        margin-bottom: 8px;
+        margin-right: 0;
+      }
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__search {
+      order: 2;
+      width: 100%;
+    }
+  }
+}
